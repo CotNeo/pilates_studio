@@ -1,0 +1,22 @@
+{
+  "name": "pilates_studio",
+  "version": "1.0.0",
+  "description": "Elif İnci Pilates Studio için bir web uygulaması.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Furkan Akar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "git": "^0.1.5",
+    "mongoose": "^8.6.3",
+    "socket.io": "^4.7.5",
+    "winston": "^3.14.2"
+  },
+  "keywords": []
+}

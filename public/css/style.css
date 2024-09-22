@@ -1,0 +1,207 @@
+/* Genel yapı */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    margin-bottom: 20px;
+}
+
+/* Görsel stil (responsive) */
+.img-fluid {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+
+/* Carousel için img ayarları */
+.carousel-img {
+    height: 100px; /* Resimlerin yüksekliği */
+    object-fit: contain; /* Resmin orantılı şekilde sığmasını sağlar */
+}
+
+/* Carousel item img ayarları (Responsive) */
+.carousel-item img {
+    max-width: 100%;
+    height: auto; /* Responsive yapısını korur */
+}
+
+/* Slayt kontrolleri için düğmeler */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Butonları görünür yapmak için arka plan */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+/* Sayfa içeriği düzeni */
+.content {
+    flex: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #d8bfd8 !important;
+    transform: translateZ(10px);
+    z-index: 10;
+}
+
+/* Genel container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Navbar */
+.navbar {
+    padding: 15px;
+}
+
+.navbar .navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px;
+}
+
+.nav-link:hover {
+    color: #d8bfd8 !important;
+    transform: translateZ(10px);
+    z-index: 10;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
+
+/* Kart yapısı */
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card:hover {
+    background-color: #f8e8f8;
+    color: #750675;
+    transform: translateZ(10px) scale(1.05);
+    z-index: 10;
+}
+
+/* Genel buton stili */
+.btn {
+    background-color: #ff6b6b !important; /* Özel toz pembesi renk */
+    color: white !important;
+    border: none !important;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover efekti */
+.btn:hover {
+    background-color: #ff4b4b !important; /* Hover sırasında daha koyu toz pembesi */
+    transform: translateY(-2px); /* Hafif yukarı hareket */
+}
+
+.btn:active {
+    transform: translateY(1px);
+    background-color: #ff3333 !important; /* Tıklandığında daha koyu bir renk */
+}
+
+/* Bootstrap'in .btn-primary sınıfını özelleştiriyoruz */
+.btn-primary {
+    background-color: #ff6b6b !important; /* Varsayılan mavi rengin yerine toz pembesi */
+    border: none !important;
+}
+
+.btn-primary:hover {
+    background-color: #ff4b4b !important; /* Hover için koyu toz pembesi */
+}
+
+.btn-primary:active {
+    background-color: #ff3333 !important; /* Tıklama efekti için koyu kırmızı */
+    transform: translateY(1px);
+}
+
+/* Randevu Saati ve Tarih İçin Genel Stil */
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    appearance: none; /* Tarayıcı varsayılan görünümünü kaldırır */
+    -webkit-appearance: none; /* Safari için varsayılan görünümü kaldırır */
+    transition: border-color 0.3s ease;
+}
+
+/* Focus Durumu */
+input[type="date"]:focus,
+input[type="time"]:focus {
+    border-color: #ff6b6b; /* Odaklanıldığında toz pembesi kenarlık */
+    outline: none; /* Varsayılan outline kaldırılır */
+}
+
+/* Zaman girişleri için placeholder görünümü */
+input[type="time"]::placeholder {
+    color: #999;
+    font-style: italic;
+}
